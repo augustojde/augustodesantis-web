@@ -49,8 +49,7 @@
   "alternateName": "Augusto Javier De Santis",
   "url": "https://www.augustodesantis.com.ar",
   "jobTitle": "Investigador de Seguridad Sistémica y Factores Humanos",
-  "description": "Investigador de accidentes de aviación con más de 28 años de experiencia. Investigó más de 55 accidentes, formó a más de 600 profesionales en 7 países. Ex Director Nacional de Investigaciones JIAAC Argentina. Autor de 7 libros sobre seguridad sistémica y factores humanos.",
-  "description": "Investigador de accidentes de aviación, especialista en seguridad sistémica, factores humanos, gestión de riesgos en industrias de alto riesgo y calidad y seguridad del paciente.",
+  "description": "Investigador de accidentes de aviación con más de 28 años de experiencia. Investigó más de 55 accidentes, formó a más de 600 profesionales en 7 países. Ex Director Nacional de Investigaciones JIAAC Argentina (dos períodos). Autor de 7 libros sobre seguridad sistémica y factores humanos en aviación y salud.",
   "knowsAbout": ["Seguridad sistémica","Factores humanos","Factores humanos en aviación","Investigación de accidentes de aviación","Seguridad operacional","Gestión de riesgos","Seguridad en industrias de alto riesgo","Seguridad industrial","Eventos adversos en salud","Calidad y seguridad del paciente","Sistemas sociotécnicos complejos","CRM","Crew Resource Management","Just Culture","Cultura justa","SMS Safety Management System","Protocolo de Londres","HFACS","Systemic Safety","Human Factors"],
   "sameAs": ["https://www.linkedin.com/in/augusto-de-santis-3826aa23","https://instagram.com/augusto.safety","https://www.fapglobalconsulting.com/es"],
   "alumniOf": [{"@type":"CollegeOrUniversity","name":"University of Southern California — Viterbi School of Engineering","sameAs":"https://www.usc.edu"},{"@type":"CollegeOrUniversity","name":"Universidad Politécnica de Madrid"}],
@@ -240,14 +239,14 @@ footer{padding:22px 44px;display:flex;align-items:center;justify-content:space-b
 
 /* ── FAQ ── */
 .faq-list{display:flex;flex-direction:column}
-.faq-item{border-top:.5px solid var(--border)}
-.faq-item:last-child{border-bottom:.5px solid var(--border)}
-.faq-q{width:100%;text-align:left;background:none;border:none;padding:16px 0;font-family:var(--ff-b);font-size:14px;font-weight:500;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:color .2s}
-.faq-q:hover{color:var(--accent)}
-.faq-q::after{content:'＋';font-size:16px;color:var(--accent2);flex-shrink:0;transition:transform .2s}
-.faq-q[aria-expanded="true"]::after{transform:rotate(45deg)}
-.faq-a{display:none;font-size:13.5px;color:var(--ink2);line-height:1.78;padding-bottom:16px;max-width:720px}
-.faq-a.open{display:block}
+details.faq-item{border-top:.5px solid var(--border)}
+details.faq-item:last-child{border-bottom:.5px solid var(--border)}
+details.faq-item summary{list-style:none;width:100%;padding:16px 0;font-family:var(--ff-b);font-size:14px;font-weight:500;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+details.faq-item summary::-webkit-details-marker{display:none}
+details.faq-item summary::after{content:'＋';font-size:16px;color:var(--accent2);flex-shrink:0}
+details.faq-item[open] summary::after{content:'－'}
+details.faq-item summary:hover{color:var(--accent)}
+.faq-a{font-size:13.5px;color:var(--ink2);line-height:1.78;padding-bottom:16px;max-width:720px}
 
 /* ── MOBILE ── */
 @media(max-width:680px){
@@ -474,55 +473,56 @@ footer{padding:22px 44px;display:flex;align-items:center;justify-content:space-b
 <!-- FAQ -->
 <section class="pubs" id="preguntas-frecuentes" style="background:var(--paper)">
   <div class="eyebrow">Preguntas frecuentes</div>
-  <h2 class="sec-title" style="margin-top:4px;margin-bottom:28px">Lo que suelen preguntar</h2>
+  <h2 class="sec-title" style="margin-top:4px;margin-bottom:8px">Lo que suelen preguntar</h2>
+  <p style="font-size:12px;color:var(--ink3);margin-bottom:24px">Última actualización: mayo 2026</p>
   <div class="faq-list">
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">¿Qué son los factores humanos en aviación? / What are human factors in aviation?</button>
+    <details class="faq-item">
+      <summary>¿Qué son los factores humanos en aviación? / What are human factors in aviation?</summary>
       <div class="faq-a">Los factores humanos en aviación estudian la interacción entre las personas, las máquinas y el entorno operacional. Según la definición de la OACI (Doc. 9683), se refieren a las personas en sus situaciones de vida y de trabajo; a su relación con las máquinas, procedimientos y ambientes que los rodean; y también a sus relaciones con los demás.<br><br>Aproximadamente el 70-80% de los accidentes de aviación tienen causas relacionadas con factores humanos, según estudios de la OACI. Sin embargo, esto no significa que los pilotos u operadores sean los culpables: la mayoría de los errores humanos son el resultado de condiciones latentes generadas por el sistema organizacional, tal como describió James Reason en su modelo del queso suizo (1990).<br><br>En 2021, la OACI evolucionó el concepto hacia "performances humanas", incorporando explícitamente los aspectos organizacionales y culturales en el análisis del comportamiento operacional. Este cambio reconoce que el desempeño humano no puede analizarse de manera aislada del sistema que lo contiene.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">¿Cómo se investiga un accidente de aviación? / How is an aviation accident investigated?</button>
+    </details>
+    <details class="faq-item">
+      <summary>¿Cómo se investiga un accidente de aviación? / How is an aviation accident investigated?</summary>
       <div class="faq-a">La investigación de accidentes de aviación sigue un proceso estandarizado por el Anexo 13 de la OACI: notificación inmediata, aseguramiento del lugar, recuperación y análisis de los registradores de vuelo (FDR y CVR), recolección de evidencia, análisis de factores contributivos y elaboración del informe final con recomendaciones de seguridad.<br><br>El objetivo no es determinar culpabilidad sino prevenir futuros accidentes. Esta distinción entre investigación de seguridad e investigación judicial es fundamental: cuando el sistema judicial interfiere en la investigación de seguridad, los operadores dejan de reportar incidentes por miedo a la autoincriminación, privando al sistema de la información que necesita para mejorar.<br><br>Una investigación mayor puede tomar entre 12 y 24 meses. En Argentina, la Junta de Seguridad del Transporte (JST) es el organismo responsable de estas investigaciones. A nivel internacional, organismos como el NTSB de EE.UU., el BEA de Francia y la AAIB del Reino Unido son referentes mundiales del proceso.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">¿Qué es la seguridad sistémica y por qué importa? / What is systemic safety?</button>
+    </details>
+    <details class="faq-item">
+      <summary>¿Qué es la seguridad sistémica y por qué importa? / What is systemic safety?</summary>
       <div class="faq-a">La seguridad sistémica es un enfoque que analiza los accidentes e incidentes como el resultado de interacciones complejas dentro de un sistema sociotécnico, en lugar de atribuirlos a errores individuales. Desarrollado por referentes como James Reason, Erik Hollnagel y Sidney Dekker, este enfoque permite identificar las condiciones latentes que hacen posible el error y diseñar defensas sistémicas más efectivas.<br><br>La diferencia práctica es significativa: un enfoque de culpabilidad individual identifica al operador que cometió el error y lo sanciona. Un enfoque sistémico pregunta qué condiciones del sistema hicieron probable ese error — y las modifica. El primero no previene el próximo accidente. El segundo sí.<br><br>Las industrias con mejores registros de seguridad del mundo — aviación comercial, energía nuclear, exploración espacial — son precisamente las que adoptaron el pensamiento sistémico como base de su gestión. Ese es el aprendizaje que puede transferirse a hospitales, industrias manufactureras y cualquier organización que opere en entornos de alto riesgo.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">¿Cómo se aplican los principios de la aviación a la seguridad del paciente? / How does aviation safety apply to patient safety?</button>
+    </details>
+    <details class="faq-item">
+      <summary>¿Cómo se aplican los principios de la aviación a la seguridad del paciente? / How does aviation safety apply to patient safety?</summary>
       <div class="faq-a">Las industrias ultraseguras como la aviación desarrollaron herramientas probadas — CRM, cultura justa, SMS y análisis sistémico de incidentes — que los sistemas de salud están adoptando formalmente. La OMS estima que ocurren 134 millones de eventos adversos evitables en hospitales de países en desarrollo cada año, causando 2,6 millones de muertes.<br><br>El Protocolo de Londres, la metodología de análisis de eventos adversos en salud más usada internacionalmente, fue diseñado directamente a partir del proceso de investigación de accidentes de aviación. Su premisa es idéntica: los eventos adversos no son causados por una persona negligente, sino por la convergencia de múltiples factores en distintos niveles del sistema.<br><br>En Argentina, la Ley 27.797 (Ley Nicolás) establece la obligatoriedad de implementar sistemas de gestión de la seguridad del paciente alineados con estos principios, creando una demanda urgente de profesionales formados en metodología sistémica.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">¿Qué es el CRM (Crew Resource Management)? / What is Crew Resource Management?</button>
+    </details>
+    <details class="faq-item">
+      <summary>¿Qué es el CRM (Crew Resource Management)? / What is Crew Resource Management?</summary>
       <div class="faq-a">El CRM (Crew Resource Management o Gestión de Recursos de Tripulación) es un conjunto de técnicas de entrenamiento desarrollado originalmente por la NASA en 1979, tras una serie de accidentes causados por fallas de comunicación en la cabina de vuelo. Su objetivo es mejorar la comunicación, la toma de decisiones y el trabajo en equipo en operaciones de alto riesgo.<br><br>La IATA estima que los sistemas voluntarios de reporte de seguridad, que solo funcionan cuando existe un ambiente de confianza como el que promueve el CRM, previenen miles de accidentes anualmente. Hoy el CRM es obligatorio en la aviación comercial de prácticamente todos los países del mundo, y sus principios se aplican en medicina, industria nuclear, manejo de emergencias y otras industrias de alto riesgo.<br><br>Su implementación es una de las razones por las que la aviación comercial tiene hoy la tasa de accidentes más baja de la historia.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">¿Qué es una cultura justa (Just Culture)? / What is Just Culture?</button>
+    </details>
+    <details class="faq-item">
+      <summary>¿Qué es una cultura justa (Just Culture)? / What is Just Culture?</summary>
       <div class="faq-a">Una cultura justa es un ambiente organizacional en el que las personas no son sancionadas por acciones u omisiones tomadas de buena fe, pero donde la negligencia grave, las violaciones deliberadas y los actos destructivos no son tolerados. Fue formalizada por el investigador Sidney Dekker y adoptada por la OACI como componente central de los Sistemas de Gestión de la Seguridad (SMS).<br><br>La cultura justa no es una cultura sin responsabilidad. La distinción clave es entre errores cometidos de buena fe dentro de sistemas con fallas, y decisiones tomadas con indiferencia hacia la seguridad. El primero requiere mejora del sistema. El segundo requiere consecuencias.<br><br>La IATA estima que los sistemas de reporte voluntario de incidentes — que solo funcionan en ambientes de cultura justa — previenen miles de accidentes anuales. Sin confianza en que el reporte no generará represalias, los operadores ocultan incidentes y el sistema pierde la información que necesita para mejorar.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">¿Cuáles son las principales causas de accidentes de aviación? / What are the main causes of aviation accidents?</button>
+    </details>
+    <details class="faq-item">
+      <summary>¿Cuáles son las principales causas de accidentes de aviación? / What are the main causes of aviation accidents?</summary>
       <div class="faq-a">Según datos de la OACI e IATA, las principales causas de accidentes de aviación son factores humanos (70-80%), fallas técnicas, condiciones meteorológicas adversas y factores organizacionales. Sin embargo, esta clasificación es simplificadora: la mayoría de los accidentes no tienen una causa única sino una cadena de eventos y condiciones latentes que convergen.<br><br>El modelo del queso suizo de James Reason (1990) explica esto con precisión: un accidente ocurre cuando los agujeros de múltiples capas de defensa se alinean simultáneamente. Cada agujero representa una falla activa o una condición latente que el sistema organizacional generó y toleró durante meses o años antes del evento.<br><br>Por eso el análisis sistémico es más efectivo que buscar un único culpable: permite identificar las fallas en todas las capas del sistema — técnica, humana, organizacional y regulatoria — y diseñar mejoras que realmente reduzcan la probabilidad de futuros accidentes.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">¿Qué es un Sistema de Gestión de la Seguridad (SMS) en aviación? / What is an Aviation Safety Management System?</button>
+    </details>
+    <details class="faq-item">
+      <summary>¿Qué es un Sistema de Gestión de la Seguridad (SMS) en aviación? / What is an Aviation Safety Management System?</summary>
       <div class="faq-a">Un SMS (Safety Management System o Sistema de Gestión de la Seguridad) es un enfoque sistemático y explícito para gestionar la seguridad operacional. Según el Anexo 19 de la OACI, tiene cuatro componentes: Política de seguridad, Gestión de riesgos de seguridad, Aseguramiento de la seguridad y Promoción de la seguridad.<br><br>Su implementación es obligatoria para aerolíneas, aeropuertos y proveedores de servicios de navegación aérea en todo el mundo. La diferencia entre un SMS efectivo y uno nominal radica en la cultura organizacional: un SMS funciona cuando los operadores confían en que reportar incidentes mejora el sistema en lugar de generarles consecuencias negativas.<br><br>El mismo concepto se está adoptando en salud bajo el nombre de sistemas de gestión de la seguridad del paciente. En Argentina, la Ley 27.797 (Ley Nicolás) establece su implementación obligatoria en establecimientos de salud, reconociendo los aprendizajes de las industrias ultraseguras.</div>
-    </div>
+    </details>
   </div>
       <div class="faq-a">El CRM o Gestión de Recursos de Tripulación es un conjunto de técnicas de entrenamiento desarrollado originalmente por la NASA en 1979 para mejorar la comunicación, toma de decisiones y trabajo en equipo en la cabina de vuelo. Hoy se aplica también en medicina, industria nuclear y otras industrias de alto riesgo. Es una de las intervenciones de seguridad más efectivas de la historia de la aviación.</div>
     </div>
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">¿Qué es una cultura justa (Just Culture) en organizaciones de alto riesgo?</button>
+    <details class="faq-item">
+      <summary>¿Qué es una cultura justa (Just Culture) en organizaciones de alto riesgo?</summary>
       <div class="faq-a">Una cultura justa es un ambiente en el que las personas no son sancionadas por acciones u omisiones tomadas de buena fe, pero donde la negligencia grave, las violaciones deliberadas y los actos destructivos no son tolerados. Es un componente fundamental de cualquier sistema de gestión de seguridad (SMS) efectivo y condición necesaria para que los trabajadores reporten incidentes sin temor a represalias.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">¿Cuáles son las principales causas de accidentes de aviación?</button>
+    </details>
+    <details class="faq-item">
+      <summary>¿Cuáles son las principales causas de accidentes de aviación?</summary>
       <div class="faq-a">Según datos de la OACI e IATA, las principales causas de accidentes de aviación son: factores humanos (70-80%), fallas técnicas, condiciones meteorológicas adversas y factores organizacionales. La mayoría de los accidentes no tienen una causa única sino una cadena de eventos y condiciones latentes que convergen. Por eso el análisis sistémico es más efectivo que buscar un único culpable.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" aria-expanded="false">¿Qué es un Sistema de Gestión de la Seguridad (SMS) en aviación?</button>
+    </details>
+    <details class="faq-item">
+      <summary>¿Qué es un Sistema de Gestión de la Seguridad (SMS) en aviación?</summary>
       <div class="faq-a">Un SMS (Safety Management System) es un enfoque sistemático y explícito para gestionar la seguridad operacional. Según el Anexo 19 de la OACI, tiene cuatro componentes: Política de seguridad, Gestión de riesgos de seguridad, Aseguramiento de la seguridad y Promoción de la seguridad. Su implementación es obligatoria para aerolíneas, aeropuertos y proveedores de servicios de navegación aérea en todo el mundo.</div>
-    </div>
+    </details>
   </div>
 </section>
 
@@ -537,7 +537,7 @@ footer{padding:22px 44px;display:flex;align-items:center;justify-content:space-b
       "name": "¿Qué son los factores humanos en aviación?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Los factores humanos en aviación estudian la interacción entre las personas, las máquinas y el entorno operacional. Analizan cómo las capacidades y limitaciones humanas —cognitivas, físicas y organizacionales— influyen en el desempeño y la seguridad. Aproximadamente el 70-80% de los accidentes de aviación tienen causas relacionadas con factores humanos, según estudios de la OACI."
+        "text": "Los factores humanos en aviación se refieren a las personas en sus situaciones de vida y de trabajo; a su relación con las máquinas, procedimientos y ambientes que los rodean (OACI Doc. 9683). Aproximadamente el 70-80% de los accidentes de aviación tienen causas relacionadas con factores humanos, según la OACI. En 2021, la OACI evolucionó el concepto hacia performances humanas, incorporando los aspectos organizacionales y culturales. El modelo del queso suizo de James Reason (1990) explica cómo las condiciones latentes del sistema hacen posibles los errores humanos."
       }
     },
     {
@@ -545,7 +545,7 @@ footer{padding:22px 44px;display:flex;align-items:center;justify-content:space-b
       "name": "¿Cómo se investiga un accidente de aviación?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La investigación de accidentes de aviación sigue un proceso estandarizado por el Anexo 13 de la OACI: notificación, aseguramiento del lugar, recolección de evidencia, análisis de factores contributivos y elaboración del informe final con recomendaciones de seguridad. El objetivo no es determinar culpabilidad sino prevenir futuros accidentes."
+        "text": "La investigación de accidentes de aviación sigue el Anexo 13 de la OACI: notificación inmediata, aseguramiento del lugar, recuperación y análisis de registradores de vuelo (FDR y CVR), recolección de evidencia, análisis de factores contributivos y elaboración del informe final con recomendaciones. El objetivo no es determinar culpabilidad sino prevenir futuros accidentes. Una investigación mayor puede tomar entre 12 y 24 meses. En Argentina, la Junta de Seguridad del Transporte (JST) es responsable de estas investigaciones."
       }
     },
     {
@@ -553,7 +553,7 @@ footer{padding:22px 44px;display:flex;align-items:center;justify-content:space-b
       "name": "¿Qué es la seguridad sistémica y por qué importa?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La seguridad sistémica analiza los accidentes como resultado de interacciones complejas dentro de un sistema sociotécnico, en lugar de atribuirlos a errores individuales. Este enfoque permite identificar condiciones latentes que hacen posible el error, y diseñar defensas sistémicas más efectivas."
+        "text": "La seguridad sistémica analiza los accidentes como resultado de interacciones complejas dentro de un sistema sociotécnico, en lugar de atribuirlos a errores individuales. Desarrollada por James Reason, Erik Hollnagel y Sidney Dekker, permite identificar las condiciones latentes que hacen posible el error. La diferencia práctica: un enfoque de culpabilidad individual sanciona al operador; un enfoque sistémico rediseña el sistema para que sea más robusto. Las industrias ultraseguras — aviación comercial, energía nuclear — adoptaron el pensamiento sistémico como base de su gestión."
       }
     },
     {
@@ -561,7 +561,7 @@ footer{padding:22px 44px;display:flex;align-items:center;justify-content:space-b
       "name": "¿Cómo se aplican los principios de la aviación a la seguridad del paciente?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Las industrias ultraseguras como la aviación desarrollaron herramientas como CRM, cultura justa y SMS que los sistemas de salud están adoptando. La OMS estima que ocurren 134 millones de eventos adversos evitables en hospitales de países en desarrollo cada año. Aplicar los aprendizajes de la aviación puede reducir significativamente esa cifra."
+        "text": "La OMS estima 134 millones de eventos adversos evitables en hospitales de países en desarrollo cada año, causando 2,6 millones de muertes. La aviación desarrolló herramientas como CRM, cultura justa, SMS y el Protocolo de Londres que los sistemas de salud están adoptando formalmente. En Argentina, la Ley 27.797 (Ley Nicolás) establece la obligatoriedad de implementar sistemas de gestión de la seguridad del paciente. La premisa compartida: los errores no son causados por individuos negligentes sino por sistemas que generan condiciones propicias para el error."
       }
     },
     {
@@ -665,22 +665,7 @@ footer{padding:22px 44px;display:flex;align-items:center;justify-content:space-b
 
 </div>
 
-<script>
-// FAQ Accordion
-document.querySelectorAll('.faq-q').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const expanded = btn.getAttribute('aria-expanded') === 'true';
-    document.querySelectorAll('.faq-q').forEach(b => {
-      b.setAttribute('aria-expanded', 'false');
-      b.nextElementSibling.classList.remove('open');
-    });
-    if (!expanded) {
-      btn.setAttribute('aria-expanded', 'true');
-      btn.nextElementSibling.classList.add('open');
-    }
-  });
-});
-</script>
+<!-- FAQ uses native details/summary — no JS needed -->
 
 <script>
 document.getElementById('contact-form').addEventListener('submit', async function(e){
