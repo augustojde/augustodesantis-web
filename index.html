@@ -404,6 +404,7 @@ footer{padding:22px 44px;display:flex;align-items:center;justify-content:space-b
   }
 }
 </script>
+<link rel="stylesheet" href="popup.css">
 </head>
 <body>
 <div class="site">
@@ -820,5 +821,43 @@ document.getElementById('contact-form').addEventListener('submit', async functio
 </script>
 
 </div>
+<!-- Overlay -->
+<div id="ads-overlay" role="presentation" aria-hidden="true"></div>
+
+<!-- Popup newsletter -->
+<div id="ads-popup" role="dialog" aria-modal="true" aria-labelledby="ads-title" aria-hidden="true">
+  <div class="ads-bar"></div>
+  <button class="ads-close" id="ads-close-btn" aria-label="Cerrar">&#10005;</button>
+  <div class="ads-body">
+    <p class="ads-eyebrow">Newsletter mensual &middot; Gratuito</p>
+    <h2 class="ads-title" id="ads-title">Seguridad sist&eacute;mica,<br>cada mes en tu bandeja</h2>
+    <p class="ads-sub">An&aacute;lisis sist&eacute;mico de accidentes, casos de factores humanos y perspectivas que conectan aviaci&oacute;n, salud e industria. Sin ruido. Sin frecuencia excesiva.</p>
+    <form id="ads-form" novalidate>
+      <div class="ads-row">
+        <input type="text" id="ads-nombre" name="nombre" placeholder="Nombre *" required autocomplete="given-name" />
+        <input type="email" id="ads-email" name="email" placeholder="Email *" required autocomplete="email" />
+      </div>
+      <input type="text" id="ads-empresa" name="empresa" placeholder="Organizaci&oacute;n" autocomplete="organization" />
+      <select id="ads-sector" name="sector" required>
+        <option value="" disabled selected>Sector *</option>
+        <option value="Salud">Ciencias de la salud</option>
+        <option value="Aviacion">Aviaci&oacute;n</option>
+        <option value="Industria">Industrias de alto riesgo</option>
+        <option value="Academico">Acad&eacute;mico / Investigaci&oacute;n</option>
+        <option value="Otro">Otro</option>
+      </select>
+      <p id="ads-status" role="alert" aria-live="polite"></p>
+      <button type="submit" id="ads-submit">Quiero recibirlo &rarr;</button>
+    </form>
+    <div id="ads-success" aria-live="polite">
+      <div class="ads-check">&#10003;</div>
+      <p class="ads-success-title">Ya est&aacute;s dentro.</p>
+      <p class="ads-success-sub">Bienvenido/a. El pr&oacute;ximo n&uacute;mero llega el primer martes del mes.<br>Revis&aacute; tu carpeta de spam si no ves nada en 24 hs.</p>
+    </div>
+    <p class="ads-privacy">Sin spam. Pod&eacute;s darte de baja en cualquier momento.<br>Tus datos se usan exclusivamente para el env&iacute;o del newsletter.</p>
+  </div>
+</div>
+
+<script src="popup.js"></script>
 </body>
 </html>
